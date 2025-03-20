@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 98%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 98%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 43 53% 66%;
+    --primary-foreground: 60 35% 12%;
+    --secondary: 60 35% 96%;
+    --secondary-foreground: 60 35% 12%;
+    --muted: 60 35% 96%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 60 35% 96%;
+    --accent-foreground: 60 35% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 60 35% 90%;
+    --input: 60 35% 90%;
+    --ring: 43 53% 66%;
+    --radius: 0.25rem;
+  }
+
+  .dark {
+    /* Dark mode - using the specified color palette */
+    --background: 60 35% 18%;
+    --foreground: 0 0% 100%;
+    --card: 60 35% 12%;
+    --card-foreground: 0 0% 100%;
+    --popover: 60 35% 12%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 43 53% 66%;
+    --primary-foreground: 60 35% 12%;
+    --secondary: 60 35% 24%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 60 35% 24%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 60 35% 24%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 60 35% 30%;
+    --input: 60 35% 30%;
+    --ring: 43 53% 66%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+.apple-button {
+  @apply px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold transition-all duration-300 ease-in-out hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+}
+
+.section-title {
+  @apply text-4xl font-bold mb-8 text-center text-foreground;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-gold-500;
+}
+
+.hover-lift {
+  @apply transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg;
+}
+
+.tactical-button {
+  @apply px-6 py-3 rounded-sm bg-olive-800 dark:bg-olive-800 text-white font-semibold border border-gold-400 transition-all duration-300 ease-in-out hover:bg-olive-900 dark:hover:bg-olive-900 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-opacity-50;
+}
+
+.tactical-gradient {
+  @apply bg-gradient-to-b from-olive-800 to-olive-900;
+}
+
+.text-tactical-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-400 to-gold-500;
+}
+
