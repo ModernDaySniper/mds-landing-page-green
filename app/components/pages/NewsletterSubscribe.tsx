@@ -35,15 +35,15 @@ export default function NewsletterSubscribe() {
   }
 
   return (
-    <section className="bg-white dark:bg-olive-900 py-20">
+    <section className="bg-white dark:bg-zinc-950 py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="bg-zinc-100 dark:bg-olive-800 rounded-sm p-8 shadow-lg border border-zinc-200 dark:border-gold-400/30"
+          className="bg-zinc-100 dark:bg-olive-800 rounded-sm p-8 shadow-lg border border-zinc-200 dark:border-zinc-700"
         >
-          <h2 className="text-2xl font-bold text-olive-800 dark:text-gold-400 mb-4 text-center">Stay Updated</h2>
+          <h2 className="text-2xl font-bold text-zinc-800 dark:text-gold-400 mb-4 text-center">Stay Updated</h2>
           <p className="text-zinc-700 dark:text-zinc-200 mb-6 text-center">
             Subscribe to our newsletter for training tips, course announcements, and tactical insights.
           </p>
@@ -58,7 +58,7 @@ export default function NewsletterSubscribe() {
                       <Input
                         placeholder="Enter your email"
                         {...field}
-                        className="bg-white dark:bg-olive-900 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
+                        className="bg-white dark:bg-zinc-800 border-zinc-200 dark:border-zinc-700 text-zinc-900 dark:text-white"
                       />
                     </FormControl>
                     <FormMessage />
@@ -67,7 +67,7 @@ export default function NewsletterSubscribe() {
               />
               <Button
                 type="submit"
-                className="w-full bg-gold-500 hover:bg-gold-400 dark:bg-gold-400 dark:hover:bg-gold-500 text-olive-900 font-bold"
+                className="w-full bg-gold-500 hover:bg-gold-400 dark:bg-gold-100 dark:hover:bg-gold-500 text-zinc-900 font-bold"
                 disabled={isSubmitting}
               >
                 {isSubmitting ? "Subscribing..." : "Subscribe"}

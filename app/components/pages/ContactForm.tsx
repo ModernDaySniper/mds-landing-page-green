@@ -44,7 +44,7 @@ export default function ContactForm() {
   }
 
   return (
-    <section id="contact" className="bg-zinc-100 dark:bg-olive-800 py-20">
+    <section id="contact" className="bg-gold-200 dark:bg-zinc-900 py-20">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,7 +62,7 @@ export default function ContactForm() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="bg-white dark:bg-olive-900 p-8 rounded-sm shadow-lg border border-zinc-200 dark:border-gold-400/30"
+          className="bg-white dark:bg-zinc-900 p-8 rounded-sm shadow-lg border border-zinc-200 dark:border-gold-400/30"
         >
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -76,7 +76,7 @@ export default function ContactForm() {
                       <Input
                         placeholder="John Doe"
                         {...field}
-                        className="bg-zinc-50 dark:bg-olive-800 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
+                        className="bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
                       />
                     </FormControl>
                     <FormMessage />
@@ -93,7 +93,7 @@ export default function ContactForm() {
                       <Input
                         placeholder="john@example.com"
                         {...field}
-                        className="bg-zinc-50 dark:bg-olive-800 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
+                        className="bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
                       />
                     </FormControl>
                     <FormMessage />
@@ -110,7 +110,7 @@ export default function ContactForm() {
                       <Input
                         placeholder="+1 (555) 000-0000"
                         {...field}
-                        className="bg-zinc-50 dark:bg-olive-800 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
+                        className="bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
                       />
                     </FormControl>
                     <FormMessage />
@@ -126,7 +126,7 @@ export default function ContactForm() {
                     <FormControl>
                       <select
                         {...field}
-                        className="w-full rounded-sm border border-zinc-200 dark:border-gold-400/30 bg-zinc-50 dark:bg-olive-800 px-3 py-2 text-zinc-900 dark:text-white"
+                        className="w-full rounded-sm border border-zinc-200 dark:border-gold-400/30 bg-zinc-50 dark:bg-zinc-800 px-3 py-2 text-zinc-900 dark:text-white"
                       >
                         <option value="">Select a course</option>
                         <option value="precision-rifle-fundamentals">Precision Rifle Fundamentals</option>
@@ -150,7 +150,7 @@ export default function ContactForm() {
                     <FormControl>
                       <Textarea
                         placeholder="Tell us about your experience level and goals..."
-                        className="min-h-[120px] bg-zinc-50 dark:bg-olive-800 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
+                        className="min-h-[120px] bg-zinc-50 dark:bg-zinc-800 border-zinc-200 dark:border-gold-400/30 text-zinc-900 dark:text-white"
                         {...field}
                       />
                     </FormControl>

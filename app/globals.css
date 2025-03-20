@@ -4,49 +4,49 @@
 
 @layer base {
   :root {
-    /* Light mode */
+    /* Light mode - Enhanced tactical theme with subtle gold */
     --background: 0 0% 100%;
     --foreground: 240 10% 3.9%;
-    --card: 0 0% 98%;
+    --card: 43 30% 98%;
     --card-foreground: 240 10% 3.9%;
-    --popover: 0 0% 98%;
+    --popover: 43 30% 98%;
     --popover-foreground: 240 10% 3.9%;
     --primary: 43 53% 66%;
     --primary-foreground: 60 35% 12%;
-    --secondary: 60 35% 96%;
+    --secondary: 43 30% 96%;
     --secondary-foreground: 60 35% 12%;
-    --muted: 60 35% 96%;
+    --muted: 43 30% 96%;
     --muted-foreground: 240 3.8% 46.1%;
-    --accent: 60 35% 96%;
+    --accent: 43 30% 96%;
     --accent-foreground: 60 35% 12%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 60 35% 90%;
-    --input: 60 35% 90%;
+    --border: 43 30% 90%;
+    --input: 43 30% 90%;
     --ring: 43 53% 66%;
-    --radius: 0.25rem;
+    --radius: 0.5rem;
   }
 
   .dark {
-    /* Dark mode - using the specified color palette */
-    --background: 60 35% 18%;
+    /* Dark mode - Enhanced tactical theme with richer zinc */
+    --background: 240 5% 12%;
     --foreground: 0 0% 100%;
-    --card: 60 35% 12%;
+    --card: 240 5% 10%;
     --card-foreground: 0 0% 100%;
-    --popover: 60 35% 12%;
+    --popover: 240 5% 10%;
     --popover-foreground: 0 0% 100%;
     --primary: 43 53% 66%;
     --primary-foreground: 60 35% 12%;
-    --secondary: 60 35% 24%;
+    --secondary: 240 5% 15%;
     --secondary-foreground: 0 0% 100%;
-    --muted: 60 35% 24%;
+    --muted: 240 5% 15%;
     --muted-foreground: 0 0% 70%;
-    --accent: 60 35% 24%;
+    --accent: 240 5% 15%;
     --accent-foreground: 0 0% 100%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
-    --border: 60 35% 30%;
-    --input: 60 35% 30%;
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
     --ring: 43 53% 66%;
   }
 }
@@ -61,16 +61,17 @@
   }
 }
 
+/* Enhanced Component Styles */
 .apple-button {
-  @apply px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold transition-all duration-300 ease-in-out hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50;
+  @apply px-6 py-3 rounded-sm bg-primary text-primary-foreground font-semibold transition-all duration-300 ease-in-out hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-opacity-50 shadow-sm hover:shadow-md;
 }
 
 .section-title {
-  @apply text-4xl font-bold mb-8 text-center text-foreground;
+  @apply text-4xl font-bold mb-8 text-center text-foreground tracking-tight;
 }
 
 .text-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-gold-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-gold-400 to-primary animate-gradient-x;
 }
 
 .hover-lift {
@@ -78,14 +79,84 @@
 }
 
 .tactical-button {
-  @apply px-6 py-3 rounded-sm bg-olive-800 dark:bg-olive-800 text-white font-semibold border border-gold-400 transition-all duration-300 ease-in-out hover:bg-olive-900 dark:hover:bg-olive-900 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-opacity-50;
+  @apply px-6 py-3 rounded-sm bg-zinc-800 dark:bg-zinc-900 text-white font-semibold border border-gold-400/50 dark:border-gold-400/30 transition-all duration-300 ease-in-out hover:bg-zinc-900 dark:hover:bg-zinc-950 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:ring-opacity-50 shadow-sm hover:shadow-md;
 }
 
 .tactical-gradient {
-  @apply bg-gradient-to-b from-olive-800 to-olive-900;
+  @apply bg-gradient-to-b from-zinc-800 to-zinc-900 dark:from-zinc-900 dark:to-zinc-950;
 }
 
 .text-tactical-gradient {
-  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-400 to-gold-500;
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-400 to-gold-500 dark:from-gold-400/90 dark:to-gold-500/90;
+}
+
+/* New Utility Classes */
+@keyframes gradient-x {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-gradient-x {
+  animation: gradient-x 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+.glass-effect {
+  @apply bg-white/90 dark:bg-zinc-950/90 backdrop-blur-md border border-white/20 dark:border-zinc-800/20 shadow-lg;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+}
+
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;
+}
+
+/* Enhanced Typography */
+.heading-1 {
+  @apply text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl;
+}
+
+.heading-2 {
+  @apply text-3xl font-bold tracking-tight sm:text-4xl;
+}
+
+.heading-3 {
+  @apply text-2xl font-bold tracking-tight sm:text-3xl;
+}
+
+.body-large {
+  @apply text-lg leading-relaxed;
+}
+
+.body {
+  @apply text-base leading-relaxed;
+}
+
+.body-small {
+  @apply text-sm leading-relaxed;
+}
+
+/* New Utility Classes for Enhanced Styling */
+.tactical-card {
+  @apply bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-lg shadow-sm hover:shadow-md transition-all duration-300;
+}
+
+.tactical-input {
+  @apply bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-md px-3 py-2 focus:ring-2 focus:ring-gold-400/50 dark:focus:ring-gold-400/30 focus:border-transparent transition-all duration-300;
+}
+
+.tactical-link {
+  @apply text-zinc-800 dark:text-zinc-200 hover:text-gold-500 dark:hover:text-gold-400 transition-colors duration-300;
+}
+
+.tactical-divider {
+  @apply border-t border-zinc-200 dark:border-zinc-800;
+}
+
+.tactical-badge {
+  @apply bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 px-2 py-1 rounded-full text-sm font-medium;
 }
 

@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 export default function Marquee() {
   return (
     <div className="relative w-full overflow-hidden bg-white dark:bg-olive-900 py-16">
-      <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-olive-900 via-transparent to-white dark:to-olive-900 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-r from-white dark:from-olive-900 via-transparent to-white dark:to-olive-900/10 z-10" />
       <motion.div
         className="flex whitespace-nowrap"
         animate={{ x: ["0%", "-50%"] }}

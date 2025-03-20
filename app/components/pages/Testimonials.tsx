@@ -29,10 +29,10 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-olive-900">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gold-200 dark:bg-olive-900">
       <div className="container mx-auto">
         <motion.h2
-          className="text-5xl font-black mb-16 text-center text-olive-900 dark:text-white"
+          className="text-5xl font-black mb-16 text-center text-olive-900 dark:text-gold-400"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -43,7 +43,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.author}
-              className="bg-zinc-100 dark:bg-olive-800 p-6 rounded-sm shadow-md border border-zinc-200 dark:border-gold-400/30"
+              className="bg-white dark:bg-zinc-900 p-6 rounded-sm shadow-md border border-zinc-200 dark:border-gold-400/30"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -58,7 +58,7 @@ export default function Testimonials() {
                   className="rounded-full mr-4"
                 />
                 <div>
-                  <p className="font-bold text-olive-800 dark:text-gold-400">{testimonial.author}</p>
+                  <p className="font-bold text-olive-900 dark:text-gold-400">{testimonial.author}</p>
                   <p className="text-zinc-600 dark:text-zinc-400">{testimonial.position}</p>
                 </div>
               </div>

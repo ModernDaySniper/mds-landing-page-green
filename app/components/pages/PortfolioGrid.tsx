@@ -57,7 +57,7 @@ export default function PortfolioGrid() {
   const filteredProjects = filter === "All" ? projects : projects.filter((project) => project.category === filter)
 
   return (
-    <section className="py-20 bg-zinc-100 dark:bg-olive-800">
+    <section className="py-20 bg-white dark:bg-zinc-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"

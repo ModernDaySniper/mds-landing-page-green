@@ -79,7 +79,7 @@ export default function Timeline() {
   })
 
   return (
-    <section ref={containerRef} className="py-20 bg-white dark:bg-olive-800 overflow-hidden">
+    <section ref={containerRef} className="py-20 bg-white dark:bg-zinc-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -87,7 +87,7 @@ export default function Timeline() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl font-bold text-olive-800 dark:text-gold-400 sm:text-4xl">Our Journey</h2>
+          <h2 className="text-3xl font-bold text-olive-900 dark:text-gold-400 sm:text-4xl">Our Journey</h2>
           <p className="mt-4 text-lg text-zinc-700 dark:text-zinc-200">The evolution of Modern Day Sniper training</p>
         </motion.div>
 
@@ -146,7 +146,7 @@ function TimelineEvent({
       <div className="w-5/12" />
       <div className="z-20">
         <div className="flex items-center justify-center w-8 h-8 bg-gold-500 dark:bg-gold-400 rounded-full">
-          <div className="w-3 h-3 bg-white dark:bg-olive-900 rounded-full" />
+          <div className="w-3 h-3 bg-white dark:bg-zinc-900 rounded-full" />
         </div>
       </div>
       <motion.div
@@ -155,7 +155,7 @@ function TimelineEvent({
         whileTap={{ scale: 0.95 }}
         onClick={onToggle}
       >
-        <div className="p-4 bg-zinc-100 dark:bg-olive-900 rounded-sm shadow-md border border-zinc-200 dark:border-gold-400/30">
+        <div className="p-4 bg-gold-100 dark:bg-zinc-800 rounded-sm shadow-md border border-zinc-200 dark:border-gold-400/30">
           <span className="font-bold text-gold-500 dark:text-gold-400">{event.year}</span>
           <h3 className="text-lg font-semibold mb-1 text-olive-900 dark:text-white">{event.title}</h3>
           <p className="text-zinc-700 dark:text-zinc-200">{event.description}</p>

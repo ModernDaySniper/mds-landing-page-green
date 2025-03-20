@@ -28,7 +28,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="courses" className="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-100 dark:bg-olive-800">
+    <section id="courses" className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-olive-900">
       <div className="container mx-auto">
         <motion.h2
           className="text-5xl font-black mb-16 text-center text-olive-900 dark:text-white"
@@ -42,7 +42,7 @@ export default function Services() {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="bg-white dark:bg-olive-900 p-6 rounded-sm shadow-md border border-zinc-200 dark:border-gold-400/30"
+              className="bg-gold-100 dark:bg-zinc-900 p-6 rounded-sm shadow-md border border-zinc-200 dark:border-gold-400/30"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}

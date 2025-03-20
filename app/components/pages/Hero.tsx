@@ -19,7 +19,7 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-24 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-32">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0 backdrop-blur-sm bg-white/30 dark:bg-black/30 p-8 rounded-sm border border-zinc-200/50 dark:border-gold-400/20">
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg lg:flex-shrink-0 backdrop-blur-sm bg-white/60 dark:bg-black/30 p-8 rounded-sm border border-zinc-200/50 dark:border-gold-400/20">
           <motion.h1
             className="mt-4 text-4xl font-bold tracking-tight text-olive-900 dark:text-white sm:text-6xl"
             initial={{ opacity: 0, y: 20 }}
