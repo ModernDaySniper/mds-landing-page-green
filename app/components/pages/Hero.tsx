@@ -9,11 +9,11 @@ export default function Hero() {
       {/* Hero image with overlay */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-image.png"
+          src="/images/MDS-Home-Hero-Image.png"
           alt="Modern Day Sniper instructors training"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-right"
         />
         <div className="absolute inset-0 bg-white/30 dark:bg-black/40 mix-blend-multiply" />
       </div>
